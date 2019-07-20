@@ -1,0 +1,85 @@
+.price-grid {
+    box-sizing: border-box;
+    position: relative;
+    line-height: 100%;
+    width: 232px;
+    min-height: 90px;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 15px;
+    background: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(230, 230, 230);
+    border-image: initial;
+}
+
+.price-tile {
+    position: relative;
+    z-index: 100;
+}
+
+.price-row {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.sym-coin {
+    font-size: 14px;
+}
+
+.title-page {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #333333;
+}
+
+.change-percen-up {
+    font-size: 105%;
+    color: #03d99f;
+}
+
+.change-percen-down {
+    font-size: 105%;
+    color: #ff6f75;
+}
+
+.ticker-price {
+    font-size: 14px;
+    margin-right: 3px;
+}
+
+.volume-coin {
+    color: rgb(51, 51, 51);
+}
+
+.price-chart {
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+//////////////// TableMarket ////////////////
+.my-custom-scrollbar {
+    overflow-y: auto;
+    position: relative;
+    height: -webkit-fill-available;
+    max-height: 615px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.my-custom-scrollbar thead th {
+    z-index: 7;
+    position: sticky;
+    top: 0;
+}

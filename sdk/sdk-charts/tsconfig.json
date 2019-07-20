@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowUnreachableCode": false,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "downlevelIteration": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "lib": ["es6", "es2015", "dom", "dom.iterable", "es5"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "suppressExcessPropertyErrors": true,
+        "noUnusedLocals": false,
+        "strictNullChecks": true,
+        "strict": true,
+        "pretty": true,
+        "target": "es5",
+        "outDir": "./dist"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "build", "scripts", "public", "acceptance-tests", "webpack", "jest", "razzle.config.js"],
+    "types": ["typePatches", "node", "webpack-env"]
+}

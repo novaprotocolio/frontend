@@ -1,0 +1,119 @@
+.title-page {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #333333;
+}
+
+.card-deposit {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
+    border-radius: 10px;
+    // border-color: #03d99f;
+}
+
+.card-title {
+    color: #333333;
+    font-weight: 500;
+}
+
+.input-address {
+    border-color: #00d99f;
+    border-radius: 5px;
+    &:hover {
+        border-color: #00d99f;
+        box-shadow: 0 0 0 1px #00d99f;
+        border-radius: 5px;
+    }
+}
+
+.input-append-text {
+    background-color: #00d99f;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0 5px 5px 0 !important;
+}
+
+.trade-link {
+    color: #f92f39;
+    font-weight: 500;
+    &:hover {
+        text-decoration: none;
+        color: #d4272f;
+        opacity: 1;
+        font-weight: 700;
+    }
+}
+
+.text-notice {
+    color: #f92f39;
+    font-weight: 600;
+}
+
+.link-view {
+    color: #000;
+    text-decoration: underline;
+    &:hover {
+        color: #000;
+    }
+}
+
+.text-address {
+    color: #03d99f;
+    font-size: 16px;
+    width: 490px;
+    word-break: break-all;
+    font-weight: bold;
+    padding: 8px 0px;
+}
+
+.text-read-more {
+    color: #03d99f;
+    font-size: 12px;
+    padding: 8px 0px;
+}
+
+.submit-button {
+    color: #000 !important;
+    background: linear-gradient(90deg, #00d99f 0%, #65efc7 100%);
+    border-color: #65efc7;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+//History Withdraw//@at-root
+.table-history {
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.table-history > thead > tr > th {
+    color: #000;
+    background-color: #cecece !important;
+}
+
+.tooltip-inner {
+    background-color: #333;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.norecord-tip {
+    color: rgb(33, 40, 51);
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.my-custom-scrollbar div {
+    overflow-y: auto;
+    position: relative;
+    height: -webkit-fill-available;
+    max-height: 330px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y div {
+    display: block;
+}
+
+.my-custom-scrollbar div thead th {
+    position: sticky;
+    top: 0;
+}

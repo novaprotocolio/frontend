@@ -1,0 +1,37 @@
+.title-page {
+    font-size: 18px;
+    font-weight: bolder;
+    color: #333333;
+}
+
+.card-deposit {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px;
+    border-radius: 10px;
+}
+
+.card-address {
+    color: #333333;
+    font-weight: 500;
+}
+
+.trade-link {
+    color: #f92f39;
+    font-weight: 500;
+    &:hover {
+        text-decoration: none;
+        color: #d4272f;
+        opacity: 1;
+        font-weight: 700;
+    }
+}
+
+.text-address {
+    color: #03d99f;
+    font-size: 16px;
+    width: 490px;
+    word-break: break-all;
+    font-weight: bold;
+    padding: 8px 0px;
+}
+
+// linear-gradient(90deg, #f0b90b 0%, #fbda3c 100%)

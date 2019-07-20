@@ -1,0 +1,507 @@
+body {
+  font-size: 14px;
+}
+.NovaSDK-toggleButton {
+  background-color: #535ec3;
+  border-color: #4954ac;
+  color: #fff !important;
+}
+.NovaSDK-dialog {
+  max-width: 900px;
+  height: 500px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #fcfcfc;
+  color: #333;
+  z-index: 10000;
+  border-radius: 2px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.NovaSDK-backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
+.NovaSDK-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.NovaSDK-desc {
+  font-size: 13px;
+  color: #666666;
+  margin-top: 8px;
+}
+.NovaSDK-fieldGroup {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  margin-top: 20px;
+}
+.NovaSDK-labelGroup {
+  display: flex;
+  justify-content: space-between;
+}
+.NovaSDK-label {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+.NovaSDK-errorMsg {
+  color: #ee494c;
+}
+.NovaSDK-closeButton {
+  position: absolute;
+  font-size: 14px;
+  background: #fcfcfc;
+  color: #666666;
+  border: 1px solid #e0e0e0;
+  bottom: 20px;
+  padding: 12px;
+}
+.NovaSDK-select {
+  position: relative;
+}
+.NovaSDK-unfolded .NovaSDK-dropdown {
+  height: auto;
+  border: 1px solid #e0e0e0;
+}
+.NovaSDK-selected {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  background: #f7f7f7;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.NovaSDK-dropdown {
+  position: absolute;
+  border-radius: 2px;
+  height: 0;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f7f7f7;
+  max-height: 240px;
+}
+.NovaSDK-dropdown.up {
+  bottom: 110%;
+}
+.NovaSDK-dropdown.down {
+  top: 110%;
+}
+.NovaSDK-item {
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+  background: #f7f7f7;
+}
+.NovaSDK-item:hover {
+  background: #e0e0e0;
+}
+
+.NovaSDK-item:first-child {
+  border-top-width: 1px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.NovaSDK-item:last-child {
+  border-bottom-width: 1px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.NovaSDK-item .disabled {
+  color: #666666;
+  cursor: not-allowed;
+}
+.NovaSDK-caret {
+  position: relative;
+  left: 12px;
+  width: 36px;
+  border-left: 1px solid #e0e0e0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+.NovaSDK-caret:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #666666;
+  border-radius: 2px;
+}
+.NovaSDK-button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: 0;
+}
+button.disabled,
+button.disabled.focus,
+button.disabled:focus,
+button.disabled:hover,
+button[disabled],
+button[disabled].focus,
+button[disabled]:focus,
+button[disabled]:hover,
+fieldset[disabled] button.focus,
+fieldset[disabled] button:focus,
+fieldset[disabled] button:hover {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+.NovaSDK-input {
+  display: block;
+  flex: 1;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+.NovaSDK-novaWalletButtonGroup {
+  display: flex;
+}
+.NovaSDK-input:focus {
+  border: 1px solid #cfcfcf;
+  outline: none;
+}
+.NovaSDK-featureButton {
+  background: #738bd7;
+  color: #fff;
+  border-color: #738bd7;
+}
+.NovaSDK-submitButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.NovaSDK-fa {
+  margin-right: 4px;
+}
+.fa-check {
+  color: #3da1a5;
+}
+.NovaSDK-optionItem svg {
+  margin-right: 6px;
+}
+.NovaSDK-optionItem {
+  display: flex;
+  align-items: center;
+}
+.NovaSDK-optionItem .disabled {
+  color: #666666;
+}
+.NovaSDK-walletFeature {
+  padding-left: 20px;
+}
+.NovaSDK-banner {
+  float: right;
+  font-size: 12px;
+}
+.NovaSDK-address-option {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+.NovaSDK-qr-image {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: auto;
+  padding-bottom: 40px;
+}
+.NovaSDK-qr-image-bg {
+  width: 200px;
+  height: 200px;
+  padding: 8px;
+  background: #fff;
+}
+.NovaSDK-qr-image-bg svg {
+  width: 200px;
+}
+.NovaSDK-mnemonic {
+  text-align: center;
+  padding: 20px 0;
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+}
+.NovaSDK-words {
+  display: grid;
+  font-size: 14px;
+  color: #333;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 0;
+  padding-inline-start: 40px;
+}
+.NovaSDK-word {
+  line-height: 30px;
+  text-align: left;
+  width: 80px;
+}
+.NovaSDK-word > input {
+  display: inline-block;
+  height: 22px;
+  margin: 0;
+  padding: 0 5px;
+  text-align: left;
+  vertical-align: text-bottom;
+  width: 60px;
+}
+.NovaSDK-word > input.invalid {
+  border-color: #ee494c;
+}
+
+.NovaSDK-word > input.valid {
+  border-color: #41a275;
+}
+.NovaSDK-confirm {
+  margin-top: 20px;
+}
+.NovaSDK-checkboxGroup {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+.NovaSDK-checkboxDiv {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  cursor: pointer;
+  color: #333;
+}
+.NovaSDK-checkbox > i {
+  opacity: 0;
+  color: #fff;
+}
+.NovaSDK-checkbox {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  background: #cfcfcf;
+  text-align: center;
+}
+.checked > .NovaSDK-checkbox {
+  background: #738bd7;
+}
+.checked > .NovaSDK-checkbox > i {
+  opacity: 1;
+}
+.ps__rail-y {
+  display: none;
+}
+.NovaSDK-addFunds {
+  color: #333;
+  margin-top: 20px;
+}
+.NovaSDK-buttonGroup {
+  display: flex;
+  width: 520px;
+  text-align: center;
+  margin: 20px auto;
+}
+.NovaSDK-buttonGroup > a {
+  display: block;
+  width: 200px;
+  height: 50px;
+}
+.NovaSDK-buttonGroup > a:first-child {
+  margin-right: 120px;
+}
+.NovaSDK-buttonGroup .button {
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+}
+.NovaSDK-buttonGroup .coinbase {
+  background-color: #0f62bd;
+}
+.NovaSDK-buttonGroup .coinbase:hover {
+  background-color: #1172dc;
+}
+.NovaSDK-buttonGroup .coinbase > svg {
+  padding-top: 7px;
+  width: 150px;
+  margin: 0 25px;
+}
+.NovaSDK-buttonGroup .gemini {
+  background-color: #000;
+}
+.NovaSDK-buttonGroup .gemini:hover {
+  background-color: #222;
+}
+.NovaSDK-buttonGroup .gemini > svg {
+  width: 160px;
+  height: 100%;
+  margin: 0 25px 0 15px;
+}
+.NovaSDK-hint {
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 12px;
+  color: #666666;
+  margin-top: 20px;
+  text-align: left;
+}
+.NovaSDK-hintTitle {
+  margin-bottom: 4px;
+  color: #333;
+}
+.NovaSDK-selectFooter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  padding: 6px;
+}
+.NovaSDK-paginationGotoPage {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 12px;
+}
+.NovaSDK-paginationGotoPage form {
+  margin-left: 12px;
+}
+.NovaSDK-paginationGotoPage input::-webkit-outer-spin-button,
+.NovaSDK-paginationGotoPage input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.NovaSDK-pagination {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  bottom: 12px;
+}
+.NovaSDK-pagination ul,
+.NovaSDK-pagination li {
+  list-style: none;
+}
+.NovaSDK-pagination li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  background: #fff;
+  color: #666666;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+}
+.NovaSDK-pagination li.disabled a,
+.NovaSDK-pagination li.disabled a:hover,
+.NovaSDK-pagination li.disabled a:focus,
+.NovaSDK-pagination li.disabled a:visited {
+  background: #e0e0e0;
+  color: #666666;
+  cursor: not-allowed;
+}
+.NovaSDK-pagination li a:hover,
+.NovaSDK-pagination li.active a,
+.NovaSDK-pagination li.active a:hover,
+.NovaSDK-pagination li.active a:focus,
+.NovaSDK-pagination li.active a:visited {
+  background: #f7f7f7;
+  color: #333;
+}
+.NovaSDK-customizationInputGroup {
+  display: flex;
+  align-items: center;
+}
+.NovaSDK-customizationInputGroup input {
+  margin: 0 12px 0 4px;
+}
+.NovaSDK-notSupport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+.NovaSDK-notSupportTitle {
+  margin-top: 12px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.NovaSDK-notSupportDesc {
+  color: #666666;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* MetaMask logo svg style*/
+.st0 {
+  fill: #e4761b;
+  stroke: #e4761b;
+}
+.st1 {
+  fill: #f6851b;
+  stroke: #f6851b;
+}
+.st2 {
+  fill: #763d16;
+  stroke: #763d16;
+}
+.st3 {
+  fill: #e2761b;
+  stroke: #e2761b;
+}
+.st4 {
+  fill: #c0ad9e;
+  stroke: #c0ad9e;
+}
+.st5 {
+  fill: #cd6116;
+  stroke: #cd6116;
+}
+.st6 {
+  fill: #e4751f;
+  stroke: #e4751f;
+}
+.st7 {
+  fill: #233447;
+  stroke: #233447;
+}
+.st8 {
+  fill: #d7c1b3;
+  stroke: #d7c1b3;
+}
+.st9 {
+  fill: #161616;
+  stroke: #161616;
+}

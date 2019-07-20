@@ -1,0 +1,29 @@
+{
+  "name": "sdk-charts",
+  "version": "0.1.25",
+  "description": "nova sdk charts",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prepare": "npm run clean && npm run build",
+    "clean": "rm -rf ./dist",
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "tsc -p .",
+    "build-css": "node-sass src/ --output dist"
+  },
+  "author": "NovaProtocol",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "react-stockcharts": "^0.7.8"
+  },
+  "devDependencies": {
+    "bignumber.js": "^8.1.1",
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
+    "node-sass": "^4.12.0",
+    "typescript": "^3.4.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
