@@ -135,6 +135,7 @@ table {
 .flex-column {
     display: flex;
     flex-direction: column;
+    overflow: auto !important;
 }
 .flex {
     display: flex;
