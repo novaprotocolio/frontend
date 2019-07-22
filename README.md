@@ -2,7 +2,7 @@
 
 This is the front end of the Nova box dex project. It's developed using react. The project is created by the [create-react-app](https://github.com/facebook/create-react-app) command.
 
-!(frontend)[assets/frontend.png]
+![frontend](assets/frontend.png)
 
 ## How to develop
 
