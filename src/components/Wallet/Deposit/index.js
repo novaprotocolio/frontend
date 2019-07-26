@@ -1,8 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getSelectedAccount } from 'sdk-wallet';
 import { Alert, Button, Container, Row, Col, Card, Image, Table, Modal } from 'react-bootstrap';
 import Select from 'react-select';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import QRCode from 'qrcode.react';
+import api from '../../../lib/api';
 import './styles.scss';
 
 const control = () => ({
@@ -87,10 +90,34 @@ class Deposit extends React.Component {
     };
   }
 
+  componentDidMount() {
+    const { address, isLoggedIn } = this.props;
+    if (isLoggedIn && address) {
+      this.getAddress(address);
+    }
+  }
+
+  async getAddress(address) {
+    let res;
+    try {
+      res = await api.get(`/deposit/generate-address?UserAddr=${address}`);
+      if (res.data.status === -1) {
+        let { coin } = this.state;
+        coin.address = address;
+        this.setState({ coin });
+        return;
+      }
+    } catch (e) {
+      // this.setState({ loading: false });
+      return;
+    }
+  }
+
   intervalID = 0;
 
   onChange = option => {
     this.setState({ coin: option });
+    this.getAddress(option.address);
   };
 
   handleClick = () => {
@@ -255,4 +282,13 @@ class Deposit extends React.Component {
   }
 }
 
-export default Deposit;
+const mapStateToProps = state => {
+  const selectedAccount = getSelectedAccount(state);
+  const address = selectedAccount ? selectedAccount.get('address') : null;
+  return {
+    address,
+    isLoggedIn: state.account.getIn(['isLoggedIn', address])
+  };
+};
+
+export default connect(mapStateToProps)(Deposit);
